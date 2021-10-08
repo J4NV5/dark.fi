@@ -1,0 +1,33 @@
+body,
+a,
+a:hover,
+.tag,
+.title          { color: #b86640; }
+
+li::before,
+p               { color: #9a5636; }
+
+body,
+.categories,
+.catbox         { background: #2f1a10; }
+
+body            { background-image: linear-gradient(to bottom right, #000, #2f1a10);
+                  background-attachment: fixed; text-shadow: 0 0 10px #b86640; }
+
+::selection     { background: #b86640; color: #ffffff; }
+
+pre             { text-shadow: 0 0 10px #b86640; }
+
+a:hover,
+a:active,
+a:focus         { background: #ccc; border: 0; outline-width: 0; }
+
+.notification,
+.subtitle2,
+.subtitle2:hover{ color: #2f1a10; background: #FFF; }
+
+.subtitle       { color: #FFF; }
+
+.code,
+.codesmall,
+.description    { background: #1f1f1f; }
