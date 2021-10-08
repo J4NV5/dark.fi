@@ -191,6 +191,7 @@
         #outline-container-logo { margin: 2em 0;}
         #table-of-contents {
             border-bottom: 2px dashed;
+            margin-bottom: 2em;
         }
         #table-of-contents h2 { display: none; }
         #table-of-contents ul { text-transform: uppercase; display: inline-block; }
@@ -203,6 +204,9 @@
             display: inline-block;
         }
         #logo p { margin: 0; }
+        .outline-2 header {
+            margin-bottom: 2em;
+        }
       #+END_SRC
 ***** Content
       #+BEGIN_SRC css
