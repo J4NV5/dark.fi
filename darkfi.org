@@ -1,0 +1,116 @@
+#+TITLE: DarkFi
+#+OPTIONS: title:nil
+
+* Header
+  :PROPERTIES:
+  :HTML_CONTAINER_CLASS: header hidden
+  :CUSTOM_ID: logo
+  :UNNUMBERED: notoc
+  :END:
+  #+BEGIN_SRC
+▀█████████████████████████████████▀
+  ███████████████████████████████▀
+   ████████████▀▀▀▀▀▀███████████  █▄▄▄▄▄▄▄▄▄▄                          ▄▄           ▄███▄▄▀ ▄█▄▄ ▄ ▄
+    ▀███████▀  ▄▄██▄  ▀████████   ▀▀███████████▄                      ███              █▀ ▄█▀▀██▀ ███
+     ▀████▀   ██▀ ▀██   ▀█████      ▄▄█ ▀█  ▀███                      ███             ██ ███       ▀
+      ▀███▄   ██   ██   ▄███▀       ███▄ █ ▄▄▀███   ▄▄█▄▄    ▄▄▄ ▄█▄█ ███   ▄█▄▄▀  ▄▄███ ███▄▄▄▄ ▄▄█▄
+        ████▄  ▀███▀   ▄███▀     ▄██████ █▀ ▄▀███  █  ▀███▀   ███▀▀▀  ███  ▄▀▀▀▀  ▄▀▀███ ████▀▀   ███
+         █████▄▄   ▄▄█████▀      ▀  ██▀█ █▀▀  ██▀  ▀▄▄▄███    ███     ███ ███        ███ ███      ███
+          ███████████████▀         ▄█▀▄▀ █   ▄██  ▄██  ███    ███     ███  ███▄      ███ ███      ███
+           █████████████           █▄█████▄▄▄█▀▀  ███▄ ███▄▄ ▄███▄▄  ▄███▄▄ ▀██▄▄    █▀  █▀      ▄███▄▄
+            ▀██████████          ▄▀▀▀▀▀▀▀▀▀▀       ▀▀▀  ▀▀     ▀▀▀     ▀▀▀   ▀▀▀  ▄█████▀          ▀▀▀
+             ▀████████                                                            ██▀▀
+              ▀█████▀                                                              ▀▀
+                ███▀
+                 █▀
+  #+END_src
+
+* About
+  :PROPERTIES:
+  :HTML_CONTAINER_CLASS: content
+  :CUSTOM_ID: about
+  :END:
+  In 2014, the FBI gave a speech on the danger that law enforcement will be made ineffective by encryption technology-- what they call the "Going Dark" problem. We are here to deliver that reality.
+
+  With robust anonymity, it is possible to disintermediate technology away from the state, and offer a fundamental break from mass surveillance and baby-sitting. This is a path destined for collision with state interests. However, we believe this is a conflict they cannot win. Faced with a burdened and slow-moving appartus, we have agility and speed. We are empowered and emboldened by the pace of innovation. We are on the winning side of history.
+
+  Dark-Fi is the harbringer of a new technological and economic paradigm. The tools we are releasing with Dark-Fi enable the creation of autonomous financial networks. This gives users the power to disintermediate local economies away from the state and large banks, and to usher in a more democratic alternative.
+
+  Too often, technology is designed to control people rather than enabling them. Modernity is a steady process of these control structure gaining dominance and reducing humans and nature into raw material to be exploited. Rather than controlling people through mechanism design as much crypto-economics often intends to do, we are instead seeking to inspire people – to create a vision of technology that empowers people from within.
+
+  We call this the Dark Renassiance. The Dark Renaissance is a revolution within cryptocurrency. It is a rallying cry to all who still believe in crypto’s true potential. It calls for a rebirth back to bitcoin’s original principles: to be autonomous, censorship-resistant and dark-by-design.
+
+* Status
+  :PROPERTIES:
+  :HTML_CONTAINER: pre
+  :CUSTOM_ID: status
+  :END:
+  #+BEGIN_SRC
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢥⡋⠀⠀⡀⠀⢄⠅⠷⣿⢽⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⡟⢧⣸⠀⡪⠕⠀⠀⠀⠄⠀⣀⡪⠟⠁⠀⠀⠄⠁⣀⣨⣫⡿⠿⠿⢗⣗⣗⣗⣭⡭⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠈⠬⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠠⢈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⠗⢸⡳⣈⠔⠳⡍⣯⣻⣌⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⡙⣄⠊⠁⠀⠀⢀⣡⠾⠵⠑⠀⠀⠀⠀⠂⡗⠍⠁⠔⠅⠄⠺⠖⠗⠅⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠈⠐⠁⢀⠨⠨⠂⠂⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠠⣌⣓⡸⠀⠀⠀⠀⠀⠀⠂⠈⠀⠄⠃⠂⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠿⠖⠁⠀⠀⢀⡪⠟⠁⠀⠀⠀⣀⣺⠞⠁⠀⠀⠀⠀⠀⠀⠀⣀⣀⣠⣠⠪⠘⠂⠖⠗⠇⢑⡿⠕⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠅⠇⠗⠐⠢⣨⣈⣀⠀⠀⠀⠀⠀⠀⢀⣀⣮⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⣘⠀⡒⠕⠂⠟⠀⠀⠀⣠⠪⠔⢁⡀⣀⣀⣨⡀⠊⠠⠂⣠⣺⠾⠗⠡⠰⠈⠀⠠⠀⣠⡾⠕⣀⢀⡀⠀⠀⢈⣨⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠂⢨⠀⡀⠄⠅⠇⠓⠲⠀⠀⠦⣼⣽⣯⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢝⠮⢊⣱⠨⠀⠺⠆⠐⠀⠀⢠⢈⠀⠄⠀⣠⠔⠠⣨⡾⠽⠈⠀⠀⠀⢀⣀⠀⣪⣺⠝⠀⣅⣁⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠅⠀⠂⠰⢨⣀⡀⠀⠀⠂⢬⣟⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⡿⠟⠁⠀⠀⠀⠀⠀⠀⠌⠁⠀⠄⠅⡧⠑⢀⡾⠑⠀⠀⠀⠀⡄⢃⠾⣸⡪⠗⠁⠒⠺⠨⠬⠍⠍⠅⠀⠀⠀⠄⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⢨⡀⠀⠅⠀⠀⠀⠀⠁⠁⠷⠗⠷⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠗⠕⠄⠀⠀⠀⠀⠀⠀⠀⢀⠈⠁⠀⠀⠀⣀⡾⠁⢠⣾⣩⠀⠀⠀⠀⠀⣀⡬⠟⣕⠀⠂⠀⠀⠠⠨⣨⣈⣀⣀⢀⢀⣀⠍⠥⣛⣸⠈⠀⠀⠀⠀⠒⠐⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⡈⠀⠈⠀⣄⠃⠒⠈⢂⣸⣰⡈⠠⣨⣨⣠⣀⡀⠤⢷⢿⣿⣿⣿⣿⣿⣿⠿⠝⠀⣀⣨⣨⣨⡈⠠⢈⣠⡈⠀⢀⣡⠺⠖⠗⠗⣗⠖⠳⣺⠿⠾⠺⠺⠺⠚⠗⠕⠁⣠⡾⠁⠀⠀⠀⠐⠈⠀⠀⠀⠄⠅⠅⠇⠗⠻⠖⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣠⠀⠨⣈⠀⠂⠐⠀⠈⠅⠀⠀⠆⣿⣿⣸⣬⡄⣏⣗⡿⣿⣸⡂⠨⣧⣿⣿⣿⣿⣽⢀⣈⣟⡿⠗⠵⣁⣠⣪⣿⣿⡝⠀⠅⢀⣠⣨⣨⢞⣵⣨⡾⢵⡺⠺⠺⣪⣨⣌⡇⠗⢺⣽⣨⣀⣀⣨⡬⠀⠀⠀⠀⠀⠀⠀⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠁⠂⠀⠀⠀⠀⠀⠀⠀
+⠀⠅⠄⡥⠮⠅⠇⠗⠗⠺⢾⣭⣋⣓⣒⠒⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣺⣿⣿⣿⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⣻⣿⣿⣿⣿⣿⡟⠁⠀⣨⣨⣺⣾⣿⣿⠿⠕⠁⢄⡀⠀⠀⡀⠀⠅⠗⠺⣸⡊⠒⠅⠇⠿⠚⠞⠚⠘⠆⠗⠈⠀⠀⠀⠀⠀⢠⡀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠄⠁⠀⠀⠀⠀⠀⠀⡠⠁⣀⢤⡏⠇⠗⠁⣁⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⠀⠇⠿⠿⣽⣭⣩⣨⣀⠀⠀⠀⠀⠀⠀⠅⠓⠸⠀⠀⠄⠇⠸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠀⠠⠤⠨⠀⠀⠀⠀⠀⠁⢀⠀⠄⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠄⠅⠄⠅⠁⠇⠅⠄⠕⠅⠃⠑⠀⠆⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣝⢦⣿⣿⢵⣷⣿⣿⣿⣿⣿⣿⣿⣿⢟⠕⠀⠀⠀⠀⠀⠂⠀⢰⣨⣯⣘⣨⣨⣈⣀⣀⣀⣀⣀⣀⣀⡀⣀⠀⠄⠲⣈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠁⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠈⠀⣀⣨⠨⠀⠀⠀⠄⢿⣿⣿⣿⣿⣿⣿⣿⡟⡿⢦⣿⣽⢷⠇⣿⣿⣿⣿⣿⣿⣿⣿⠑⠀⠀⠀⠀⠁⠅⠁⠀⠀⠄⠇⡕⠷⠍⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠇⠳⣪⣨⣀⣀⣀⣨⣨⣨⣨⣈⣨⠨⠚⠐⠄⠀⠀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠁⠀⠀⠀⠄⠀⠀⠀⠀⠀⠀⠀⠠⠐⠁⠀⠠⠀⠠⠒⠀⠀⠀⢷⣿⣿⣿⣿⣿⣿⣿⣿⣮⣿⣻⣾⡹⢿⣿⣿⣿⣿⣿⠑⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⠰⢈⡀⠀⠀⠀⠀⠀⠀⠀⠀⠲⠀⠂⠀⠀⠀⠄⠐⠖⠅⠿⠿⠿⠿⠿⣩⣏⣻⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⣿⣿⣿⣿⣿⣻⡉⠷⠿⠟⠅⣢⣿⣿⣿⣿⣿⡟⡙⠀⠀⠀⢀⠀⠀⠀⠀⠨⠈⠀⠀⡀⠂⠀⠈⠅⠳⣸⣈⢈⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠄⢧⠑⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⡀⠀⠈⠀⠀⠀⠅⠀⠁⠀⠄⠕⠁⠀⠀⠀⠀⠀⠗⣟⣿⡿⢿⡿⣿⣸⣈⣪⣾⠿⠿⠿⠟⡕⣽⣾⠈⠀⠒⠲⠞⢺⣨⡁⠐⠀⢈⠀⠀⠀⠀⠀⠀⠀⡈⠀⠅⠛⢨⡥⡀⠇⠒⠺⠺⢸⣨⠚⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⢀⠜⠀⠀⠀⠰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣨⡨⠈⠂⠂⠅⠆⢿⣻⡀⢺⣠⣨⣈⣠⣨⣨⡈⠀⣢⠿⠗⡁⠀⠠⡀⠀⠀⠀⠇⢼⡇⠿⢾⣸⣀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠄⠇⠖⢸⣈⠀⠀⠀⠀⠄⠅⠗⠒⠘⠀⠀⠀⠀⢀⡈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⡀⠀⠢⠶⠗⠅⠅⠀⠀⠀⠀⠀⠂⠀⣠⠈⡀⡀⠧⢿⠿⠿⡿⠝⢚⡀⠀⠂⠼⣈⣀⠀⠀⠀⠀⠐⠀⠄⢱⡀⠀⠀⠅⠷⢸⣈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⠄⠒⢠⡀⡀⠀⠀⠀⠀⠀⠀⣠⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⠌⠀⢀⡠⠞⠔⠁⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢢⠝⢦⠙⠑⣼⣺⣏⣽⣸⣻⠄⠁⠀⠀⠀⠀⠄⠇⠰⠀⠀⠀⠀⠀⠄⢹⠀⠀⠀⠀⠀⠄⠗⠸⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⠀⠀⠀⠀⠀⠢⠕⠀⠐⠰⣨⣄⣀⠠⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠊⠕;⠀⠀⠀⠀⠀⠄⠗⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠝⠀⣦⠀⠀⠀⠷⠗⠿⠕⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠅⠰⣀⣈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠺⠀⠀⠀⠀⠀⠀⠅⠗⠗⠺⠸⠀⠀⠀⠀⠀⠀
+  #+END_SRC
+
+  #+BEGIN_SRC
+gateway@dark.fi
+------------------------
+Status: OFFLINE
+Uptime: N/A
+IP: N/A
+Connections: N/A
+Peers: N/A
+Kernel: 5.11.11
+Type: ACCEPT/REJECT
+  #+END_SRC
+* Updates
+  :PROPERTIES:
+  :HTML_CONTAINER_CLASS: section articles
+  :CUSTOM_ID: updates
+  :END:
+
+** [[https://dark.fi][Jan 18, 2021]] :: Dark.fi website
+   Sint et iure ab dolore totam eos quos. Eveniet delectus quia aperiam aliquid quae. Iure qui sed beatae reprehenderit praesentium quae. Rerum nihil recusandae ipsa rem ut labore id incidunt. Et deleniti cumque rerum dolore. Rem qui ullam similique quae id veritatis et.
+
+   Rerum occaecati similique ut qui enim. Et eum aut et tenetur qui ut sapiente aut. Sit eos quia itaque doloremque distinctio sed. Inventore asperiores explicabo in. Expedita ut autem quis in et voluptates quaerat iure. Tempore veniam quis aut cumque harum omnis.
+
+   Magnam est molestiae accusamus sapiente recusandae mollitia. Et eum accusamus aut illo blanditiis. Omnis qui dolorem et ipsam nulla eius qui autem. Minima animi odit nihil. Voluptatem eius esse molestiae quod saepe beatae quasi non.
+
+** [[https://dark.fi][Oct 07, 2021]] :: Update 2
+   Illum qui reprehenderit ipsam impedit tempore. Dolor est tempora quasi nesciunt unde numquam. Ad ut sunt consequatur cum facilis et. Aut nemo quia temporibus quod. Et et quae dolor repudiandae quas vel. Commodi qui dolores blanditiis ratione.
+
+   Dicta ut hic explicabo ab error numquam. Odit deserunt impedit sed. Asperiores ut sed omnis in earum magnam. Dolor et dolor nisi aperiam.
+
+* Community
+  :PROPERTIES:
+  :HTML_CONTAINER_CLASS: footer
+  :CUSTOM_ID: community
+  :END:
+
+** Matrix :: https://element.dark.fi
+** Source :: https://github.com/darkresaissance/darkfi
+
+* Links
+  :PROPERTIES:
+  :HTML_CONTAINER_CLASS: footer
+  :CUSTOM_ID: links
+  :END:
+
+** [[https://nymtech.net][Nym Technologies]] :: Anonymous mixnet for the next generation
+** [[http://z.cash][Zcash]] :: Zero knowledge cryptocurrency

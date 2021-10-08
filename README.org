@@ -1,0 +1,477 @@
+#+TITLE: Dark.fi web
+
+* Instructions
+  #+BEGIN_SRC sh
+    $ git clone https://github.com/zkjanus/dark.fi
+    $ make
+  #+END_SRC
+
+  This section is used to publish the documentation to =html= in the =pub/=
+  directory.
+
+  This code defines the =ow-publish= which are used to publish the website into
+  =html=.
+
+** Requirements
+   #+BEGIN_SRC emacs-lisp
+     (require 'ox-html)
+   #+END_SRC
+** Building html postamble
+   #+NAME: html-postamble
+   #+BEGIN_SRC sh :tangle no :results output
+     if [ -d .git ]; then
+         LC_MESSAGES=en git --no-pager log -1 HEAD --date=short --pretty=format:'Last update %ad - commit <a href=https://github.com/zkjanus/dark.fi/commit/%H>%h</a>'
+     fi
+   #+END_SRC
+** Building html preamble
+   #+NAME: html-preamble
+   #+BEGIN_SRC sh :tangle no :results output
+   #+END_SRC
+** Project definition
+   #+BEGIN_SRC emacs-lisp :noweb yes
+     (setq this-directory (file-name-directory (or load-file-name buffer-file-name)))
+     (setq pub-directory (concat this-directory "pub/"))
+     (unless (boundp 'org-publish-project-alist)
+       (setq org-publish-project-alist nil))
+
+     (setq org-publish-timestamp-directory "/tmp/org-timestamps/")
+
+     (setq org-html-style-default "")
+     (setq org-html-htmlize-output-type 'css)
+
+     (add-to-list
+      'org-publish-project-alist
+      `("ow-publish"
+        :base-directory ,this-directory
+        :base-extension "org"
+        :publishing-directory ,pub-directory
+        :publishing-function org-html-publish-to-html
+        :exclude ".*publish.*.org\\|README.org"
+        :time-stamp-file nil
+        :section-numbers nil
+        :with-toc 1
+        :html-head "
+        <link rel=\"stylesheet\" href=\"css/screen.css\"/>
+        <link rel=\"stylesheet\" href=\"css/color-blue.css\"/>
+        <link rel=\"stylesheet\" href=\"css/org-pygments.css\"/>
+        <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=VT323\"/>
+        "
+        :html-preamble  "<<html-preamble()>>"
+        :html-postamble "<<html-postamble()>>"
+        :html-head-include-scripts nil))
+   #+END_SRC
+** Exporter functions
+   #+BEGIN_SRC emacs-lisp
+     (defun org-publish-html ()
+       (progn
+         (org-publish-project "ow-publish" 'force)
+         (rename-file (expand-file-name "darkfi.html" pub-directory)
+                      (expand-file-name "index.html" pub-directory) t)
+         ))
+   #+END_SRC
+
+* CSS stylesheets
+** Main stylesheets
+   :PROPERTIES:
+   :HEADER-ARGS: :tangle pub/css/screen.css
+   :END:
+*** Google fonts
+    #+BEGIN_SRC css
+      @import url(//fonts.googleapis.com/css?family=VT323);
+    #+END_SRC
+
+*** Main =css= definitions
+**** Body
+     #+BEGIN_SRC css
+       html {
+           -webkit-font-smoothing: antialiased;
+           -moz-osx-font-smoothing: grayscale;
+       }
+       body {
+           letter-spacing: 0.1px;
+           padding: 0;
+           margin: auto;
+           font-family: 'VT323';
+           font-weight: normal;
+           font-size: 18px;
+           max-width: 950px;
+           animation: fadeIn linear 2s;
+           -webkit-animation: fadeIn linear 2s;
+           -moz-animation: fadeIn linear 2s;
+           -o-animation: fadeIn linear 2s;
+           -ms-animation: fadeIn linear 2s;
+       }
+       @keyframes fadeIn {
+           0% {opacity:0;}
+           100% {opacity:1;}
+       }
+       @-moz-keyframes fadeIn {
+           0% {opacity:0;}
+           100% {opacity:1;}
+       }
+       @-webkit-keyframes fadeIn {
+           0% {opacity:0;}
+           100% {opacity:1;}
+       }
+       @-o-keyframes fadeIn {
+           0% {opacity:0;}
+           100% {opacity:1;}
+       }
+       @-ms-keyframes fadeIn {
+           0% {opacity:0;}
+           100% {opacity:1;}
+       }
+       body::after {
+           content: "";
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100vw;
+           height: 100vh;
+           background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+           pointer-events: none;
+       }
+
+     #+END_SRC
+**** Headline
+     #+BEGIN_SRC css
+       h3              { font-size: 1em; }
+       h3 span         { margin: 0; font-weight: bold; }
+       h3 a            { font-weight: normal; }
+     #+END_SRC
+
+     Lets hide some of the headlines.
+     #+BEGIN_SRC css
+       .title, #hidden, .hidden h3, .hidden h2 {
+           display: none;
+       }
+     #+END_SRC
+**** Link
+     #+BEGIN_SRC css
+       a {text-decoration: none; }
+       a:hover {
+           text-decoration: none;
+           text-shadow: 0 0 black;
+           box-shadow: 0 0 3px #ccc;
+       }
+     #+END_SRC
+
+**** Code, table
+     #+BEGIN_SRC css
+       ul   {padding: 0;}
+       span {padding: 0; margin: 0 10px 0 0;}
+       li {margin: 0.3em 0; padding: 0; list-style: none;}
+       /*li::before      {content: '\276d'; margin-left: -15px;}*/
+       pre {
+           padding: 0; margin: 0;
+           -webkit-background-clip: text;
+           background-clip: text;
+           font-weight: normal;
+           font-size: 15px;
+           line-height: 15px;
+       }
+       pre.pb {
+           margin: 3em auto;
+           font-weight: bold;
+       }
+     #+END_SRC
+**** Images
+     #+BEGIN_SRC css
+       img {width: 950px; max-width: 650px; margin-bottom: 20px;}
+       img {
+           width:100%;
+       }
+     #+END_SRC
+     p
+**** Skeleton
+***** Header
+      #+BEGIN_SRC css
+        .header			{ width: 100%; }
+        .logodiv pre    { font-weight: bold; }
+        #outline-container-logo { margin: 2em 0;}
+        #table-of-contents {
+            border-bottom: 2px dashed;
+        }
+        #table-of-contents h2 { display: none; }
+        #table-of-contents ul { text-transform: uppercase; display: inline-block; }
+        #table-of-contents li { display: inline-block; margin-right: 1em; }
+        #table-of-contents li a { font-size: 20px; }
+        #table-of-contents li a::after { content: "∕"; padding: 0 0.5em; }
+        #text-table-of-contents::before {
+            content: "$>";
+            margin-right: 1em;
+            display: inline-block;
+        }
+        #logo p { margin: 0; }
+      #+END_SRC
+***** Content
+      #+BEGIN_SRC css
+        #page           { max-width: 950px; margin: auto; padding:0; }
+        #content        {max-width:100%; margin: auto; }
+        #text-about {
+            border-bottom: 2px dashed;
+            padding-bottom: 1em;
+        }
+
+        #about, #status {
+            visibility: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        #about { margin-bottom: -1.5em; }
+        #text-logo p {
+            margin: 0;
+        }
+        #text-status {
+            display: table-row;
+            -webkit-perspective: 750px;
+            -moz-perspective: 750px;
+            -ms-perspective: 750px;
+            perspective: 750px;
+        }
+        #text-status pre {
+            display: table-cell;
+        }
+        @-webkit-keyframes spinner {
+            from { -webkit-transform: rotateY(0deg);    }
+            to   { -webkit-transform: rotateY(-360deg); }
+        }
+
+        /* all other browsers */
+        @keyframes spinner {
+            from {
+                -moz-transform: rotateY(0deg);
+                -ms-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+            }
+            to {
+                -moz-transform: rotateY(-360deg);
+                -ms-transform: rotateY(-360deg);
+                transform: rotateY(-360deg);
+            }
+        }
+        #text-status pre:first-child {
+            margin: 0;
+            letter-spacing: -4px;
+            font-weight:bold;
+            font-size: 15px;
+            line-height:15px;
+            overflow: hidden;
+
+            /*   -webkit-animation-name: spinner; */
+            /*   -webkit-animation-timing-function: linear; */
+            /*   -webkit-animation-iteration-count: infinite; */
+            /*   -webkit-animation-duration: 6s; */
+
+            /*   animation-name: spinner; */
+            /*   animation-timing-function: linear; */
+            /*   animation-iteration-count: infinite; */
+            /*   animation-duration: 6s; */
+
+            /*   -webkit-transform-style: preserve-3d; */
+            /*   -moz-transform-style: preserve-3d; */
+            /*   -ms-transform-style: preserve-3d; */
+            /*   transform-style: preserve-3d; */
+            /* } */
+
+            /* #text-status pre:first-child:hover { */
+            /*   -webkit-animation-play-state: paused; */
+            /*   animation-play-state: paused; */
+        }
+        #text-status pre:last-child {
+            font-family: 'VT323';
+            font-size: 18px;
+            line-height: 18px;
+            display: table-cell;
+        }
+        .outline-2 h2 {
+            border-bottom: 2px dashed;
+            padding-bottom: 0.7em;
+            text-transform: uppercase;
+        }
+        .articles h3 {
+            text-transform: uppercase;
+        }
+        .articles h3::before {
+            content: "»";
+            margin-right: 1em;
+        }
+        .articles .outline-3 {
+            margin: 3em 0;
+        }
+      #+END_SRC
+***** Section
+      #+BEGIN_SRC css
+        #post           {max-width: 900px; margin-bottom: 20px; margin-top: -10px; line-height: 28px;}
+        .categories		{max-width: 300px; right:0; margin: 40px 60px 0 0; position: fixed;
+                         text-align: right; z-index: 0;}
+      #+END_SRC
+***** Project
+      #+BEGIN_SRC css
+        .outline-2.footer {
+            min-width: 460px;
+            display: table-cell;
+        }
+        #outline-container-links {
+            padding-left: 10px;
+        }
+      #+END_SRC
+***** Footer
+      #+BEGIN_SRC css
+        #footer 		{max-width: 950px; margin-top: 55px;}
+      #+END_SRC
+
+** Colors
+
+*** Green
+    :PROPERTIES:
+    :HEADER-ARGS: :tangle pub/css/color-green.css
+    :END:
+    #+BEGIN_SRC css
+      body,
+      a,
+      a:hover,
+      .tag,
+      .title          { color: #008f11; }
+
+      li::before,
+      p               { color: #006c2a; }
+
+      body,
+      .categories,
+      .catbox         { background: #006c2a; }
+
+      body            { background-image: linear-gradient(to bottom right, #000, #003615);
+                        background-attachment: fixed; text-shadow: 0 0 10px #008f11; }
+
+      ::selection     { background: #; color: #ffffff; }
+
+      pre             { text-shadow: 0 0 10px #008f11; }
+
+      a:hover,
+      a:active,
+      a:focus         { background: #ccc }
+
+      .notification,
+      .subtitle2,
+      .subtitle2:hover{ color: #006c2a; background: #FFF; }
+
+      .subtitle       { color: #FFF; }
+
+      .code,
+      .codesmall,
+      .description    { background: #1f1f1f; }
+
+    #+END_SRC
+*** Blue
+    :PROPERTIES:
+    :HEADER-ARGS: :tangle pub/css/color-blue.css
+    :END:
+    #+BEGIN_SRC css
+
+      body,
+      a,
+      a:hover,
+      .tag,
+      .title          { color: #1477cd; }
+
+      li::before,
+      p               { color: #0e518b; }
+
+      body,
+      .categories,
+      .catbox         { background: #222430; }
+
+      body            { background-image: linear-gradient(to bottom right, #000, #12294c);
+                        background-attachment: fixed; text-shadow: 0 0 10px #1477cd; }
+
+      ::selection     { background: #1477cd; color: #ffffff; }
+
+      pre             { text-shadow: 0 0 10px #1477cd; }
+
+      a:hover,
+      a:active,
+      a:focus         { background: #ccc }
+
+      .notification,
+      .subtitle2,
+      .subtitle2:hover{ color: #222430; background: #FFF; }
+
+      .subtitle       { color: #FFF; }
+
+      .code,
+      .codesmall,
+      .description    { background: #1f1f1f; }
+    #+END_SRC
+
+*** Rust
+    :PROPERTIES:
+    :HEADER-ARGS: :tangle pub/css/color-rust.css
+    :END:
+    #+BEGIN_SRC css
+      body,
+      a,
+      a:hover,
+      .tag,
+      .title          { color: #b86640; }
+
+      li::before,
+      p               { color: #9a5636; }
+
+      body,
+      .categories,
+      .catbox         { background: #2f1a10; }
+
+      body            { background-image: linear-gradient(to bottom right, #000, #2f1a10);
+                        background-attachment: fixed; text-shadow: 0 0 10px #b86640; }
+
+      ::selection     { background: #b86640; color: #ffffff; }
+
+      pre             { text-shadow: 0 0 10px #b86640; }
+
+      a:hover,
+      a:active,
+      a:focus         { background: #ccc; border: 0; outline-width: 0; }
+
+      .notification,
+      .subtitle2,
+      .subtitle2:hover{ color: #2f1a10; background: #FFF; }
+
+      .subtitle       { color: #FFF; }
+
+      .code,
+      .codesmall,
+      .description    { background: #1f1f1f; }
+
+    #+END_SRC
+
+
+** Org source code styles
+   :PROPERTIES:
+   :HEADER-ARGS: :tangle pub/css/org-pygments.css
+   :END:
+
+   #+BEGIN_SRC css
+     .org-string,
+     .org-type {
+         color: #DEB542;
+     }
+
+     .org-builtin,
+     .org-variable-name,
+     .org-constant,
+     .org-function-name {
+         color: #69B7F0;
+     }
+
+     .org-comment,
+     .org-comment-delimiter,
+     .org-doc {
+         color: #93a1a1;
+     }
+
+     .org-keyword {
+         color: #D33682;
+     }
+
+   #+END_SRC
